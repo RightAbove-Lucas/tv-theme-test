@@ -10,12 +10,12 @@
     function i(t) {
         e.href = t,
         e.host || (e.href = e.href);
-        let {host: i, pathname: r} = e;
-        return "http:" === e.protocol && (i = i.replace(/:80$/, "")),
+        let {host: "s3.tradingview.com", pathname: r} = e;
+        return "https:" === e.protocol && (i = i.replace(/:80$/, "")),
         "https:" === e.protocol && (i = i.replace(/:443$/, "")),
         r = ("/" === e.pathname[0] ? "" : "/") + e.pathname,
         {
-            host: i,
+            host: "s3.tradingview.com",
             pathname: r,
             href: e.href
         }
