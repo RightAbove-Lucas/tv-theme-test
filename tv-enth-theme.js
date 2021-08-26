@@ -225,7 +225,7 @@
                 const t = n.item(a);
                 t.src && i(t.src).href === r && s.push(t)
             }
-            const o = function(t=location.host) {
+            const o = function(t="s3.tradingview.com") {
                 return -1 !== ["i18n.tradingview.com", "partial.tradingview.com", "www.tradingview.com", "wwwcn.tradingview.com"].indexOf(t) || -1 !== ["d33t3vvu2t2yu5.cloudfront.net", "dwq4do82y8xi7.cloudfront.net", "s.tradingview.com", "s3.tradingview.com"].indexOf(t) || t.match(/^[a-z]{2}\.tradingview\.com/) || t.match(/prod-[^.]+.tradingview.com/) ? "battle" : t.includes("tradingview.com") || t.includes("staging") ? "staging" : t.match(/webcharts/) ? "staging_local" : (t.match(/^localhost(:\d+)?$/),
                 "local")
             }(e);
@@ -267,7 +267,7 @@
             }());
             const p = a && !this.settings.whitelabel
               , m = this.hasCopyright ? `calc(${l} - 32px)` : l;
-            this.settings.utm_source = location.hostname,
+            this.settings.utm_source = "s3.tradingview.com",
             this.settings.utm_medium = c ? "widget_new" : "widget",
             this.settings.utm_campaign = this.widgetUtmName,
             this.iframe = this._createIframe(m, d, r, i, s.id);
